@@ -244,8 +244,17 @@
   /* ---------- location ---------- */
   .location{ background:var(--surface); }
   .loc-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:28px;
-    max-width:900px; margin:0 auto;
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px;
+    max-width:1040px; margin:0 auto;
+  }
+  .loc-photo{
+    border-radius:18px; overflow:hidden; aspect-ratio:4/5;
+    box-shadow:0 10px 26px -18px var(--shadow);
+  }
+  .loc-photo img{ width:100%; height:100%; object-fit:cover; }
+  @media (max-width:900px){
+    .loc-grid{ grid-template-columns:1fr 1fr; }
+    .loc-photo{ grid-column:1 / -1; aspect-ratio:16/7; }
   }
   .loc-card{
     background:var(--bg); border:1px solid var(--border); border-radius:18px;
@@ -272,7 +281,10 @@
   .specials h4{ font-family:'Baloo 2',sans-serif; font-size:1.05rem; margin-bottom:2px; }
   .specials p{ font-size:.9rem; opacity:.85; }
 
-  @media (max-width:700px){ .loc-grid{ grid-template-columns:1fr; } }
+  @media (max-width:700px){
+    .loc-grid{ grid-template-columns:1fr; }
+    .loc-photo{ aspect-ratio:4/5; }
+  }
 
   /* ---------- about ---------- */
   .about-grid{
@@ -470,6 +482,9 @@
       </div>
 
       <div class="loc-grid">
+        <div class="loc-photo">
+          <img src="storefront.jpg" alt="Los Amores de Julia storefront at night">
+        </div>
         <div class="loc-card">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.6 7-12a7 7 0 1 0-14 0c0 5.4 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Rancho Cucamonga</h3>
           <p class="loc-line">

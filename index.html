@@ -11,8 +11,8 @@
   :root{
     --brand-teal:#1E4A41;
     --brand-teal-deep:#123128;
-    --brand-mustard:#E7AC2E;
-    --brand-mustard-deep:#C68B16;
+    --brand-mustard:#EDC855;
+    --brand-mustard-deep:#C2A446;
     --brand-chile:#C1392B;
     --on-teal:#FBF1E1;
 
@@ -99,20 +99,9 @@
     max-width:1160px; margin:0 auto;
     gap:16px;
   }
-  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--brand-teal-deep); }
-  .brand svg{ width:42px; height:42px; flex:none; }
-  .brand-word{ line-height:1.02; }
-  .brand-word .name{
-    font-family:'Baloo 2', sans-serif; font-weight:800;
-    font-size:clamp(1.05rem,3vw,1.45rem);
-    letter-spacing:.01em;
-  }
-  .brand-word .sub{
-    font-family:'Baloo 2', sans-serif; font-weight:600;
-    font-size:.62rem; letter-spacing:.16em; text-transform:uppercase;
-    opacity:.82;
-  }
-  .brand-word .sig{ font-family:'Caveat',cursive; font-weight:700; font-size:.82rem; opacity:.75; }
+  .brand{ display:flex; align-items:center; text-decoration:none; }
+  .brand img{ height:52px; width:auto; display:block; }
+  @media (max-width:480px){ .brand img{ height:42px; } }
 
   nav.primary{ display:flex; align-items:center; gap:28px; }
   nav.primary a{
@@ -188,7 +177,7 @@
     min-height:48px;
   }
   .btn-solid{ background:var(--brand-mustard); color:var(--brand-teal-deep); }
-  .btn-solid:hover{ background:#F2C15A; }
+  .btn-solid:hover{ background:#F0D06F; }
   .btn-outline{ border-color:var(--on-teal); color:var(--on-teal); }
   .btn-outline:hover{ background:rgba(251,241,225,.12); }
 
@@ -333,15 +322,7 @@
 <header>
   <div class="headbar">
     <a class="brand" href="#top">
-      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M24 40C24 40 6 29.2 6 17.6 6 10.6 11.2 6 17 6c3.4 0 6 1.7 7 4.3C25 7.7 27.6 6 31 6c5.8 0 11 4.6 11 11.6C42 29.2 24 40 24 40Z" fill="var(--brand-chile)"/>
-        <path d="M23.6 9c-1.6 3-4.4 4.4-4.4 8 0 2.4 1.9 3.9 3.8 3.9-.7-1-.9-1.9-.4-2.9.5 1.6 1.7 2.1 2.7 3.3.9 1.1 1.1 2.7.2 4.1 2.3-.7 3.9-2.9 3.9-5.6 0-4.8-4.5-6.2-5.8-10.8Z" fill="var(--brand-mustard)"/>
-      </svg>
-      <span class="brand-word">
-        <span class="name">Los Amores de Julia</span><br/>
-        <span class="sub">Mexican Bistro</span><br/>
-        <span class="sig">by Misael Guerrero</span>
-      </span>
+      <img src="logo.png" alt="Los Amores de Julia — Mexican Bistro, by Misael Guerrero">
     </a>
     <nav class="primary" aria-label="Primary">
       <a href="#top">Home</a>

@@ -287,15 +287,9 @@
   }
 
   /* ---------- about ---------- */
-  .about-grid{
-    display:grid; grid-template-columns:.85fr 1.15fr; gap:44px; align-items:center;
-    max-width:1000px; margin:0 auto;
+  .about-solo{
+    max-width:680px; margin:0 auto; text-align:center;
   }
-  .about-art{
-    background:var(--brand-mustard); border-radius:22px; padding:26px;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .about-art svg{ width:100%; height:auto; }
   .about h2{ font-size:clamp(1.6rem,3.4vw,2.1rem); }
   .about .script{ color:var(--brand-chile); font-size:1.3rem; display:block; margin-bottom:6px; }
   .about p{ color:var(--text-soft); margin-top:14px; line-height:1.65; }
@@ -303,10 +297,9 @@
     margin-top:22px; padding:16px 18px; border-radius:14px;
     border:1.5px dashed var(--brand-chile);
     background:color-mix(in srgb, var(--brand-chile) 8%, transparent);
-    font-size:.86rem; color:var(--text-soft);
+    font-size:.86rem; color:var(--text-soft); text-align:left;
   }
   .owner-note strong{ color:var(--text); }
-  @media (max-width:760px){ .about-grid{ grid-template-columns:1fr; } }
 
   /* ---------- footer ---------- */
   footer{
@@ -514,21 +507,12 @@
 
   <section id="about">
     <div class="container">
-      <div class="about-grid about">
-        <div class="about-art" aria-hidden="true">
-          <svg viewBox="0 0 200 200">
-            <circle cx="100" cy="100" r="92" fill="var(--brand-teal)"/>
-            <path d="M100 30c-16 0-28 14-28 32 0 24 28 60 28 60s28-36 28-60c0-18-12-32-28-32Z" fill="var(--on-teal)"/>
-            <circle cx="100" cy="62" r="11" fill="var(--brand-chile)"/>
-          </svg>
-        </div>
-        <div>
-          <span class="script">Our Story</span>
-          <h2>A family table, open to everyone</h2>
-          <p>Los Amores de Julia brings scratch-made Mexican cooking to Rancho Cucamonga — antojitos, tacos, and platillos built around family recipes and fresh ingredients, served in a warm bistro setting.</p>
-          <div class="owner-note">
-            <strong>Placeholder copy.</strong> Swap this paragraph for Misael's real story once we meet — background, what makes the kitchen distinct, any press or awards worth mentioning.
-          </div>
+      <div class="about-solo about">
+        <span class="script">Our Story</span>
+        <h2>A family table, open to everyone</h2>
+        <p>Los Amores de Julia brings scratch-made Mexican cooking to Rancho Cucamonga — antojitos, tacos, and platillos built around family recipes and fresh ingredients, served in a warm bistro setting.</p>
+        <div class="owner-note">
+          <strong>Placeholder copy.</strong> Swap this paragraph for Misael's real story once we meet — background, what makes the kitchen distinct, any press or awards worth mentioning.
         </div>
       </div>
     </div>
